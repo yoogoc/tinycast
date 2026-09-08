@@ -146,6 +146,8 @@ final class LauncherCoordinator {
             core.quickActionCoordinator.run(.summarize)
         case .calculatorHistory:
             paletteCoordinator.togglePalette(mode: .calculatorHistory)
+        case .textTransform:
+            paletteCoordinator.togglePalette(mode: .textTransform)
         case .clipboardHistory:
             paletteCoordinator.togglePalette(mode: .clipboard)
         case .searchEmoji:

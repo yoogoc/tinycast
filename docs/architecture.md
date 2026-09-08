@@ -10,7 +10,8 @@ Independently of the folder tree, every mature subsystem has converged on the sa
 
 ```
 ┌─ PURE ─────────────────────────────────────────────────────────────────────┐
-│ Foundation only. No AppKit, no clock, no network, no filesystem. Every     │
+│ Foundation and data-only system frameworks. No AppKit, no clock, no       │
+│ network, no filesystem. Every                                             │
 │ environment fact is an injected parameter.                                 │
 │ ⇒ Compiled verbatim by a harness, so it cannot drift.                      │
 │                                                                            │
@@ -52,7 +53,8 @@ Independently of the folder tree, every mature subsystem has converged on the sa
 In the folder tree those become `Model/`, `Service/`, and `UI/` plus `Settings/` — observable state lives
 in whichever of the two owns it.
 
-- **`Model/` — pure.** Foundation only, plus SQLite3 or CoreGraphics where the data demands it.
+- **`Model/` — pure.** Foundation plus data-only system frameworks such as CryptoKit, SQLite3 or
+  CoreGraphics where the data demands it.
   Everything from the environment is **injected**: `CalcEngine` takes `now` / `calendar` / `rates`,
   `LauncherRankingStore` takes `now` and its file URL, `WindowActionMemory` takes `now` as a parameter,
   `UninstallRules` is handed directory *names* rather than URLs, and `QuicklinkStore` is handed the home
@@ -84,8 +86,8 @@ app: the stores (`AppIndex`, `ClipboardStore`, `SnippetsStore`, `QuicklinkStore`
 (`ClipboardManager`,
 `HotKeyManager`, `HyperKeyTap`, `RunningAppsMonitor`, `SnippetKeywordListener`), the shared state
 (`AppSettings`, `PaletteState`, `FileSearchSession`, `UninstallSession`,
-`CustomCommandArgumentSession`, `MeetingClock`), `NotesStore`, the twenty feature coordinators, and the
-window controllers.
+`CustomCommandArgumentSession`, `MeetingClock`), `NotesStore`, the twenty-one feature coordinators, and
+the window controllers.
 
 `AppDelegate.applicationDidFinishLaunching` calls `AppCore.shared.start()` and nothing else. That is the
 one wiring point, and `start()` reads as the app's whole boot sequence in one screen.
@@ -206,7 +208,8 @@ Tinycast/
   Assets.xcassets/  the app icon and the bundled image sets some catalog symbols resolve to
   Features/
     PaletteRowIndex.swift   the flat selection index — palette-owned, so it sits at the top
-    Launcher/ Clipboard/ Calculator/ Calendar/ Emoji/ FileSearch/ Notes/ Quicklinks/ Snippets/
+    Launcher/ Clipboard/ Calculator/ TextTransform/ Calendar/ Emoji/ FileSearch/ Notes/ Quicklinks/
+    Snippets/
     Uninstall/ SystemActions/ CustomCommands/ HotKeys/ Backup/ WindowManagement/ Onboarding/
     Updates/ Support/ AI/ Settings/
     Extensions/

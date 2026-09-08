@@ -76,6 +76,7 @@ palette indexes into it. Adding a mode means adding a conformer, not a branch in
 | `.launcher` | `LauncherScreen` | `LauncherList` |
 | `.clipboard` | `ClipboardScreen` | `ClipboardList` + preview |
 | `.calculatorHistory` | `CalculatorHistoryScreen` | `CalculatorHistoryList` |
+| `.textTransform` | `TextTransformScreen` | `TextTransformList` |
 | `.emoji` | `EmojiScreen` | `EmojiGridView` |
 | `.fileSearch` | `FileSearchScreen` | `FileSearchList` (see [file-search.md](file-search.md)) |
 | `.schedule` | `ScheduleScreen` | `ScheduleList` (see [calendar.md](calendar.md)) |
