@@ -95,6 +95,7 @@ answers through `perform(_:at:)`, so a new chord never adds a cast to the shell.
 | `.launcher` | `LauncherScreen` | `LauncherList` |
 | `.clipboard` | `ClipboardScreen` | `ClipboardList` + preview |
 | `.calculatorHistory` | `CalculatorHistoryScreen` | `CalculatorHistoryList` |
+| `.textTransform` | `TextTransformScreen` | `TextTransformList` |
 | `.emoji` | `EmojiScreen` | `EmojiGridView` |
 | `.fileSearch` | `FileSearchScreen` | `FileSearchList` (see [file-search.md](file-search.md)) |
 | `.schedule` | `ScheduleScreen` | `ScheduleList` (see [calendar.md](calendar.md)) |

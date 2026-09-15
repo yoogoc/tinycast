@@ -55,6 +55,7 @@ keep it actively maintained. GitHub Sponsors isn't available in my country, so p
   index of our own.
 - **Clipboard history** — text and images, searchable, pasted back into the app you were using.
 - **Calculator** — do math, unit, live currency and crypto conversions inline, right in the palette.
+- **Text transform** — Base64, URL and JSON transforms, JWT decoding and common hashes.
 - **Quicklinks** — turn a URL, search, file or deeplink into a command, with placeholders for typed
   input, the clipboard or the date.
 - **Snippets** — reusable Markdown templates with dynamic placeholders, arguments, nested references
